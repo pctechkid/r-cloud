@@ -757,6 +757,7 @@ function copyToClipboard(str) {
 // Document display video |mp4|webm|avi|
 function file_video(path) {
   const url = window.location.origin + path;
+  const dl = url.replace(/\[/g,'%5B').replace(/\]/g,'%5D');
   let player_items = [
     {
       text: 'MXPlayer(Free)',
